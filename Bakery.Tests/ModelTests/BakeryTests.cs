@@ -8,34 +8,44 @@ namespace Bakery.Tests
   [TestClass]
   public class BreadTests
   {
-    [Test Method]
-    public void BreadCost_CostOneBread_Int()
+    [TestMethod]
+    public void  BreadCost_CostOneBread_Int()
     {
-      int breadQuantitiy = 1;
+      int breadQuantity = 1;
       double breadCost = 5;
-      Bread breadOrder = new Bread(breadQuantitiy);
-      Assert.AreEqual(breadCost, breadOrder.breadCost());
+      Bread breadOrder = new Bread(breadQuantity);
+      Assert.AreEqual(breadCost, breadOrder.BreadCost());
     }
 
-    [Test Method]
+    [TestMethod]
     public void BreadCost_CostTwoBread_Int()
     {
-      int breadQuantitiy = 2;
+      int breadQuantity = 2;
       double breadCost = 10;
-      Bread breadOrder = new Bread(breadQuantitiy);
-      Assert.AreEqual(breadCost, breadOrder.breadCost());
-  }
-    
-  [TestClass]
-  public class PastryTests
-  {
-    [Test Method]
-    public void PastryCost_CostOnePastry_Int();
+      Bread breadOrder = new Bread(breadQuantity);
+      Assert.AreEqual(breadCost, breadOrder.BreadCost());
+    }
+
+     [TestMethod]
+    public void BreadCost_ThirdBreadDiscount_Int()
     {
-      int pastryQuantity = 1;
-      double pastryCost = 2;
-      Pastry pastryOrder = new Pastry(pastryQuantity);
-      Assert.AreEqual(pastryCost, pastryOrder.PastryCost());
+      int breadQuantity = 3;
+      double breadCost = 10;
+      Bread breadOrder = new Bread(breadQuantity);
+      Assert.AreEqual(breadCost, breadOrder.BreadCost());
     }
   }
+
+  // [TestClass]
+  // public class PastryTests
+  // {
+  //   [TestMethod]
+  //   public void PastryCost_CostOnePastry_Int()
+  //   {
+  //     int pastryQuantity = 1;
+  //     double pastryCost = 2;
+  //     Pastry pastryOrder = new Pastry(PastryQuantity);
+  //     Assert.AreEqual(pastryCost, pastryOrder.PastryCost());
+  //   }
+  // }
 }
