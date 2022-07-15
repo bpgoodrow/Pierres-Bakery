@@ -8,6 +8,12 @@ namespace Bakery.Models
     private double _Discount;
     public int Quantity { get; set; }
 
+    public static double Price
+    {
+        get { return _Price; }
+        set { _Price = value; }
+    }
+
     public Bread(int quantity)
     {
       _Price = Price;
