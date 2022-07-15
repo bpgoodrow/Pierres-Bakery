@@ -10,7 +10,7 @@ namespace Bakery.Models
     public static void Main()
     {
       Console.WriteLine("Welcome to Pierre's Bakery!");
-      Console.WriteLine("Would you like some bread or a pastry?");
+      Console.WriteLine("Would you like some bread or a pastry or a cake?");
       string response = Console.ReadLine();
       if (response == "bread")
       {
@@ -29,7 +29,17 @@ namespace Bakery.Models
         Console.WriteLine("How many pastries would you like?");
         int pastryOrder = int.Parse(Console.ReadLine());
         Pastry userPastry = new Pastry(pastryOrder);
-        Console.WriteLine("for " + userPastry.Quantity + " pastries your total is $" + userPastry.PastryCost());
+        Console.WriteLine("For " + userPastry.Quantity + " pastries your total is $" + userPastry.PastryCost());
+        Console.WriteLine("Thanks for coming to Pierre's Bakery!");
+      }
+      else if (response == "cake")
+      {
+        Console.WriteLine("Cakes cost $" + Cake.Price + " per cake.");
+        Console.WriteLine("No discounts on cakes today!");
+        Console.WriteLine("How many cakes would you like?");
+        int cakeOrder = int.Parse(Console.ReadLine());
+        Cake userCake = new Cake(cakeOrder);
+        Console.WriteLine("For " + userCake.Quantity + " cake(s) your total is $" + userCake.CakeCost());
         Console.WriteLine("Thanks for coming to Pierre's Bakery!");
       }
       else
