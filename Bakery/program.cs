@@ -20,6 +20,7 @@ namespace Bakery.Models
         int breadOrder = int.Parse(Console.ReadLine());
         Bread userBread = new Bread(breadOrder);
         Console.WriteLine("For " + userBread.Quantity + " loaves of bread your total is $" + userBread.BreadCost());
+        Console.WriteLine("Thanks for coming to Pierre's Bakery!");
       }
       else if (response == "pastry")
       {
@@ -29,6 +30,7 @@ namespace Bakery.Models
         int pastryOrder = int.Parse(Console.ReadLine());
         Pastry userPastry = new Pastry(pastryOrder);
         Console.WriteLine("for " + userPastry.Quantity + " pastries your total is $" + userPastry.PastryCost());
+        Console.WriteLine("Thanks for coming to Pierre's Bakery!");
       }
       else
       {

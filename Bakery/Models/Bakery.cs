@@ -10,8 +10,8 @@ namespace Bakery.Models
 
     public static int Price
     {
-        get { return _Price; }
-        set { _Price = value; }
+      get { return _Price; }
+      set { _Price = value; }
     }
 
     public Bread(int quantity)
@@ -81,6 +81,29 @@ namespace Bakery.Models
         }
       }
       return PastryTotal;
+    }
+  }
+
+  public class Cake
+  {
+    private static int _Price = 25;
+    public int Quantity { get; set; }
+
+    public static int Price
+    {
+      get { return _Price; }
+      set { _Price = value; }
+    }
+
+    public Cake(int quantity)
+    {
+      _Price = Price;
+      Quantity = quantity;
+    }
+
+    public int CakeCost()
+    {
+      return 20;
     }
   }
 }

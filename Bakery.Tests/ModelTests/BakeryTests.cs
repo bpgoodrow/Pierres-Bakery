@@ -66,4 +66,17 @@ namespace Bakery.Tests
       Assert.AreEqual(pastryCost, pastryOrder.PastryCost());
     }
   }
+
+  [TestClass]
+  public class CakeTests
+  {
+    [TestMethod]
+    public void CakeCost_OneCake_Int()
+    {
+      int cakeQuantity = 1;
+      int cakeCost = 25;
+      Cake cakeOrder = new Cake(cakeQuantity);
+      Assert.AreEqual(cakeCost, cakeOrder.CakeCost());
+    }
+  }
 }
