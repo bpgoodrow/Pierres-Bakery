@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using Bakery.Models;
 
-namespace BakeryPastry.Tests
+namespace PastryTests.Tests
 {
   [TestClass]
   public class PastryTests
