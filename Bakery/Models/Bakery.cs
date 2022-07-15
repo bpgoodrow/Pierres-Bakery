@@ -103,7 +103,17 @@ namespace Bakery.Models
 
     public int CakeCost()
     {
-      return 20;
+      int CakeTotal = 0;
+      for (int index = 0; index <= Quantity; index++)
+      if (index == 0)
+      {
+        CakeTotal += 0;
+      }
+      else
+      {
+        CakeTotal += _Price;
+      }
+    return CakeTotal;
     }
   }
 }
