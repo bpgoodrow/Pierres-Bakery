@@ -7,18 +7,13 @@ namespace Bakery.Models
     private static double Price = 5;
     public int Quantity { get; }
 
-    public static double Price
-    {
-      get { return _price; }
-    }
-
     public Bread(int quantity)
     {
       _price = Price;
       Quantity = quantity;
     }
 
-    public double breadCost()
+    public double breadCost(breadOrder)
     {
       double breadTotal = 0;
       for (int index = 0; index <= Quantity; index++)
@@ -30,7 +25,7 @@ namespace Bakery.Models
         else
         {
           {
-            breadTotal =+ _price;
+            breadTotal += _price;
           }
         }
       }
