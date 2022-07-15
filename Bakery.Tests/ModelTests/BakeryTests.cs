@@ -6,7 +6,7 @@ using Bakery.Models;
 namespace Bakery.Tests
 {
   [TestClass]
-  public class BakeryTests
+  public class BreadTests
   {
     [Test Method]
     public void BreadCost_CostOneBread_Int()

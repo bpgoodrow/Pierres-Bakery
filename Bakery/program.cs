@@ -14,11 +14,16 @@ namespace Bakery.Models
       string response = Console.ReadLine();
       if (response == "bread")
       {
-        Console.WriteLine("Bread Costs $5 per loaf.");
+        Console.WriteLine("Bread Costs $" + Bread.Price + " per loaf.");
         Console.WriteLine("However, we currently have a deal: buy 2 loaves of bread get the 3rd free!");
         Console.WriteLine("How many loaves of bread would you like?");
-        string breadResponse = int.Parse(Console.ReadLine());
+        int breadOrder = int.Parse(Console.ReadLine());
         Bread userBread = new Bread(breadOrder);
+        Console.WriteLine("For " + userBread.Quantity + " loaves of bread your total is $" + userBread.breadCost());
+      }
+      else
+      {
+        Main();
       }
     }
   }

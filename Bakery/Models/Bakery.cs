@@ -2,18 +2,20 @@ using System;
 
 namespace Bakery.Models
 {
-  public class Bakery
+  public class Bread
   {
-    private static double Price = 5;
-    public int Quantity { get; }
+    private static double _Price = 5;
+    private double _Discount;
+    public int Quantity { get; set; }
 
     public Bread(int quantity)
     {
-      _price = Price;
+      _Price = Price;
+      _Discount = 0;
       Quantity = quantity;
     }
 
-    public double breadCost(breadOrder)
+    public double BreadCost()
     {
       double breadTotal = 0;
       for (int index = 0; index <= Quantity; index++)
@@ -22,11 +24,13 @@ namespace Bakery.Models
         {
           breadTotal += 0;
         }
+        else if (index % 3 == 0)
+        {
+          breadTotal += _Price * _Discount;
+        }
         else
         {
-          {
-            breadTotal += _price;
-          }
+          breadTotal += _Price;
         }
       }
       return breadTotal;
