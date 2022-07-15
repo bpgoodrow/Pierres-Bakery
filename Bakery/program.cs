@@ -21,6 +21,15 @@ namespace Bakery.Models
         Bread userBread = new Bread(breadOrder);
         Console.WriteLine("For " + userBread.Quantity + " loaves of bread your total is $" + userBread.BreadCost());
       }
+      else if (response == "pastry")
+      {
+        Console.WriteLine("Pastries cost $" + Pastry.Price + " per pastry.");
+        Console.WriteLine("However, we currently have a deal: buy 2 pastries get the 3rd pastry half off!");
+        Console.WriteLine("How many pastries would you like?");
+        int pastryOrder = int.Parse(Console.ReadLine());
+        Pastry userPastry = new Pastry(pastryOrder);
+        Console.WriteLine("for " + userPastry.Quantity + " pastries your total is $" + userPastry.PastryCost());
+      }
       else
       {
         Main();

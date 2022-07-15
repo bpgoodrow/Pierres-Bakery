@@ -69,18 +69,18 @@ namespace Bakery.Models
       {
         if (index == 0)
         {
-          pastryTotal += 0;
+          PastryTotal += 0;
         }
         else if (index % 3 == 0)
         {
-          pastryTotal += _Price * _Discount;
+          PastryTotal += _Price * _Discount;
         }
         else
         {
-          pastryTotal += _Price;
+          PastryTotal += _Price;
         }
       }
-      return pastryTotal;
+      return PastryTotal;
     }
   }
 }
